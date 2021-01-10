@@ -2,6 +2,7 @@
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false"%>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,7 +17,7 @@
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
 	
-<link rel="icon" href="icon" />
+<link rel="icon" href="<c:url value='/resources/image/favicon.ico'/>" />
 <title>
 	<c:if test="${page=='home'}">
 		Product Details
@@ -52,7 +53,7 @@
 				</c:if>
 
 				<c:if test="${page=='add'}">
-					<h4 class="text-center">Add your Product</h4>
+					<%@include file="addproduct.jsp" %>
 				</c:if>
 			</div>
 		</div>
