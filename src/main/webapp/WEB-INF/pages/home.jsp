@@ -6,14 +6,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-<%@include file="all_css_js.jsp" %>
-<title>
-	<c:if test="${page=='home'}">
+<%@include file="all_css_js.jsp"%>
+<title><c:if test="${page=='home'}">
 		Product Details
 	</c:if> <c:if test="${page=='add'}">
 		Add : Product Details 
-	</c:if>
-</title>
+	</c:if></title>
 </head>
 <body>
 	<div class="container mt-3">
@@ -25,13 +23,10 @@
 						class="list-group-item list-group-item-action list-group-item-success active"
 						disabled>Menu</button>
 					<a href="<c:url value='/add'></c:url>"
-						class="list-group-item list-group-item-action">
-						Add Product
-					</a>
-					<a href="<c:url value='/home'></c:url>"
-						class="list-group-item list-group-item-action">
-						View Product 
-						<span class="badge badge-pill badge-warning">2</span>
+						class="list-group-item list-group-item-action"> Add Product </a> <a
+						href="<c:url value='/home'></c:url>"
+						class="list-group-item list-group-item-action"> View Product <span
+						class="badge badge-pill badge-warning">2</span>
 					</a>
 				</div>
 			</div>
@@ -42,12 +37,12 @@
 				</c:if>
 
 				<c:if test="${page=='add'}">
-					<%@include file="addproduct.jsp" %>
+					<%@include file="addproduct.jsp"%>
 				</c:if>
 			</div>
 		</div>
 	</div>
 
-	
+
 </body>
 </html>
