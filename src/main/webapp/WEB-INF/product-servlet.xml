@@ -14,6 +14,9 @@
 	<!-- This is to mention the controller loaction in the application -->
 	<context:component-scan base-package="com.controller"/>
     <mvc:annotation-driven enable-matrix-variables="true"/>
+    
+    <!-- This is for using resources for the front end -->
+    <mvc:resources mapping="/resources/**" location="/resources/"/>
 	
 	<!-- This helpls in finding the pages with prefix with folder path -->
 	<!-- and suffix with the type of extention of the view -->
