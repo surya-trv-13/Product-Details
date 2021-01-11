@@ -28,7 +28,7 @@ public class HomeController {
 		return "home";  
 	}
 	
-	@RequestMapping(value="/saveProduct", method=RequestMethod.POST)
+	@RequestMapping(value="/saveProduct", method=RequestMethod.POST) // By Default the method is get
 	public String saveProduct(@ModelAttribute("product") ProductDetail prodDetail, Model model) {
 		prodDetail.setAddDate(new Date());
 		System.out.println(prodDetail);
