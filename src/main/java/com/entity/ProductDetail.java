@@ -5,13 +5,13 @@ import java.util.Date;
 public class ProductDetail {
 	private String productName;
 	private String productCategory;
-	private double price;
+	private Double price;
 	private Date addDate;
 	public ProductDetail() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public ProductDetail(String productName, String productCategory, double price, Date addDate) {
+	public ProductDetail(String productName, String productCategory, Double price, Date addDate) {
 		super();
 		this.productName = productName;
 		this.productCategory = productCategory;
@@ -30,10 +30,10 @@ public class ProductDetail {
 	public void setProductCategory(String productCategory) {
 		this.productCategory = productCategory;
 	}
-	public double getPrice() {
+	public Double getPrice() {
 		return price;
 	}
-	public void setPrice(double price) {
+	public void setPrice(Double price) {
 		this.price = price;
 	}
 	public Date getAddDate() {

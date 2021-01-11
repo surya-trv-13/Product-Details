@@ -5,23 +5,26 @@
 <%@ page isELIgnored="false"%>
 
 <!-- URL for form action -->
-<c:url var="save_url"  value="/saveProduct" /> 
+<c:url var="save_url" value="/saveProduct" />
 
 <h4 class="text-center">Add your Product</h4>
-<form:form action="${save_url}" method="post" modelAttribute="product">
+
+<!-- Model Attribute should have the entity key for which this form is made  -->
+<form:form action="saveProduct" method="post" modelAttribute="product">
 	<div class="form-group">
-		<form:label path = "productName">Product Name :</form:label>
-		<form:input path="productName" cssClass="form-control" placeholder="Enter about your product"/>
+		<form:label path="productName">Product Name :</form:label>
+		<form:input path="productName" cssClass="form-control"
+			placeholder="Enter about your product" autocomplete="off" />
 		<br>
-		<form:label path = "productCategory">Product Category :</form:label>
-		<form:input path="productCategory" cssClass="form-control" placeholder="Enter Category of the product"/>
+		<form:label path="productCategory">Product Category :</form:label>
+		<form:input path="productCategory" cssClass="form-control"
+			placeholder="Enter Category of the product" autocomplete="off" />
 		<br>
-		<form:label path = "price">Price :</form:label>
-		<form:input path="price" cssClass="form-control" placeholder="Enter Price (in Rupees)"/>
+		<form:label path="price">Price :</form:label>
+		<form:input path="price" cssClass="form-control"
+			placeholder="Enter Price (in Rupees)" autocomplete="off" />
 	</div>
 	<div class="container text-center">
-		<button class="btn btn-outline-success">
-			Add Product
-		</button>
+		<button class="btn btn-outline-success">Add Product</button>
 	</div>
 </form:form>

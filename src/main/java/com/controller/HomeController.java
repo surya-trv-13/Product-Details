@@ -1,8 +1,12 @@
 package com.controller;
 
+import java.util.Date;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.entity.ProductDetail;
 
@@ -22,5 +26,13 @@ public class HomeController {
 		model.addAttribute("page", page);
 		model.addAttribute("product" , productDetail);
 		return "home";  
+	}
+	
+	@RequestMapping(value="/saveProduct", method=RequestMethod.POST)
+	public String saveProduct(@ModelAttribute("product") ProductDetail prodDetail, Model model) {
+		prodDetail.setAddDate(new Date());
+		System.out.println(prodDetail);
+		model.addAttribute("page", "home");
+		return "home";
 	}
 }
