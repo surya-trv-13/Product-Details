@@ -16,6 +16,13 @@
 <body>
 	<div class="container mt-3">
 		<h2 class="text-center display-5">Welcome to Product Details</h2>
+		<c:if test="${not empty message}">
+			<div class="alert alert-success">
+				<b> 
+					<c:out value="${message}"></c:out>
+				</b>
+			</div>
+		</c:if>
 		<div class="row mt-5">
 			<div class="col-md-3">
 				<div class="list-group">

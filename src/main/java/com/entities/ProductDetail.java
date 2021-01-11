@@ -1,8 +1,9 @@
-package com.entity;
+package com.entities;
 
 import java.util.Date;
 
 public class ProductDetail {
+	private int productId;
 	private String productName;
 	private String productCategory;
 	private Double price;
@@ -17,6 +18,12 @@ public class ProductDetail {
 		this.productCategory = productCategory;
 		this.price = price;
 		this.addDate = addDate;
+	}
+	public int getProductId() {
+		return productId;
+	}
+	public void setProductId(int productId) {
+		this.productId = productId;
 	}
 	public String getProductName() {
 		return productName;

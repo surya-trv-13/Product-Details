@@ -4,9 +4,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ page isELIgnored="false"%>
 
-<!-- URL for form action -->
-<c:url var="save_url" value="/saveProduct" />
-
 <h4 class="text-center">Add your Product</h4>
 
 <!-- Model Attribute should have the entity key for which this form is made  -->
