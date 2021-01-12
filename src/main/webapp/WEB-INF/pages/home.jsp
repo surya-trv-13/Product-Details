@@ -41,6 +41,7 @@
 				<!-- This JSTL shows the use of test if the recieved string is home from controller-->
 				<c:if test="${page=='home'}">
 					<h4 class="text-center">All Product(s)</h4>
+					<%@include file="all_products.jsp" %>
 				</c:if>
 
 				<c:if test="${page=='add'}">
