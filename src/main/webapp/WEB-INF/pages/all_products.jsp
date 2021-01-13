@@ -4,9 +4,12 @@
 <%@ page isELIgnored="false"%>
 
 <c:forEach items="${products}" var="p">
-	<div class="card">
+	<div class="card my-3 card-warning">
 		<div class="card-body">
 			<h3><c:out value="${p.productName}"></c:out></h3>
+			<p>
+				<c:out value="${p.productCategory}"></c:out>
+			</p>
 		</div>
 	</div>
 </c:forEach>

@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,6 +22,10 @@ public class HomeController {
 	public String home(Model model) {
 		String page= "home";
 		model.addAttribute("page", page);
+		
+		List<ProductDetail> list = productDao.showProduct();
+		
+		model.addAttribute("products", list);
 		return "home";  // This is the name of the view file
 	}
 	
