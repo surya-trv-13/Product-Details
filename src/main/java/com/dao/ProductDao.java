@@ -24,4 +24,6 @@ public class ProductDao {
 		return products;
 		
 	}
+	
+	// Code for changes using HQL
 }
