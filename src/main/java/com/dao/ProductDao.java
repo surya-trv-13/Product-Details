@@ -1,15 +1,17 @@
 package com.dao;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
 import com.entities.ProductDetail;
 
-public class ProductDao {
+public class ProductDao extends AbstractDao{
 	@Autowired
 	HibernateTemplate hibernateTemplate;
 	
@@ -26,4 +28,10 @@ public class ProductDao {
 	}
 	
 	// Code for changes using HQL
+	@Transactional
+	public int countRows() {
+		Query<Integer> query = getSession().createSQLQuery("SELECT COUNT(*) FROM product_detail");
+		return query.uniqueResult();
+		
+	}
 }

@@ -24,7 +24,7 @@ public class HomeController {
 		model.addAttribute("page", page);
 		
 		List<ProductDetail> list = productDao.showProduct();
-		
+		model.addAttribute("product_count", this.productDao.countRows());
 		model.addAttribute("products", list);
 		return "home";  // This is the name of the view file
 	}
@@ -35,6 +35,7 @@ public class HomeController {
 		ProductDetail productDetail = new ProductDetail();
 		model.addAttribute("page", page);
 		model.addAttribute("product" , productDetail);
+		model.addAttribute("product_count", this.productDao.countRows());
 		return "home";  
 	}
 	

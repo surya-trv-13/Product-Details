@@ -33,7 +33,7 @@
 						class="list-group-item list-group-item-action"> Add Product </a> <a
 						href="<c:url value='/home'></c:url>"
 						class="list-group-item list-group-item-action"> View Product <span
-						class="badge badge-pill badge-warning">2</span>
+						class="badge badge-pill badge-warning"><c:out value="${product_count}"></c:out></span>
 					</a>
 				</div>
 			</div>
