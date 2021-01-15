@@ -47,6 +47,7 @@ public class HomeController {
 		this.productDao.saveProduct(prodDetail);
 		
 		model.addAttribute("message", "Successfully Added !");
+		model.addAttribute("product_count", this.productDao.countRows());
 		model.addAttribute("page", "home");
 		return "home";
 	}

@@ -6,6 +6,7 @@ import java.util.List;
 import javax.transaction.Transactional;
 
 import org.hibernate.query.Query;
+import org.hibernate.type.IntegerType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate5.HibernateTemplate;
 
@@ -30,8 +31,9 @@ public class ProductDao extends AbstractDao{
 	// Code for changes using HQL
 	@Transactional
 	public int countRows() {
-		Query<Integer> query = getSession().createSQLQuery("SELECT COUNT(*) FROM product_detail");
-		return query.uniqueResult();
-		
+		Query query = getSession()
+					.createSQLQuery("SELECT COUNT(*) FROM product_detail")
+					.addScalar("count(*)", IntegerType.INSTANCE);
+		return (Integer) query.uniqueResult();
 	}
 }
